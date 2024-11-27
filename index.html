@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
     <div id="main">
-        <h1>Daniele De Padova</h1>
-        <span>Lista delle applicazioni</span>
-        <a href="/login">Vai alla login</a>
+      <h1>Daniele De Padova</h1>
+      <span>Lista delle applicazioni</span>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="/primo-esempio/">Primo esempio</a></td>
+            <td>Applicazione di introduzione</td>
+            <td>25/11/2024</td>
+          </tr>
+          <tr>
+            <td><a href="/login/">Login</a></td>
+            <td>
+              Applicazione contenente un form di login
+            </td>
+            <td>26/11/2024</td>
+          </tr>
+          <tr>
+            <td><a href="/carte-identita/">Carte d'identità</a></td>
+            <td>Applicazione di esempio con più pagine HTML</td>
+            <td>27/11/2024</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
+  </body>
 </html>
