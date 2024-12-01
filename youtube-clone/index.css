@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", serif;
+}
+
+/* In questo modo, se vogliamo dare delle dimensioni (altezza/larghezza) non veniamo confusi
+dal padding e dal margine */
+* {
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  padding: 8px;
+}
+
+/*
+Voglio che la mia toolbar sia un display flex così da poter separare i vari elementi
+semplicemente attraverso la proprietà "justify-content: space-between;"
+e posso allineare il tutto al centro con "align-items: center;"
+*/
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+/* Sempre per disporre il pulsante e l'input vicini, il mio form deve essere un display flex */
+.toolbar > .search-bar {
+  display: flex;
+  align-items: center;
+  --border-color: #e0e0e0;
+}
+
+/* Utilizzo il tag button e input generico perché il "percorso" che ho utilizzato mi porta univocamente al
+div search bar all'interno della toolbar, e so che non avrò altri input */
+.toolbar > .search-bar > input {
+  height: 38px;
+  width: 500px;
+  border-radius: 40px 0 0 40px;
+  border: 1px solid var(--border-color);
+  padding-left: 24px;
+}
+
+.toolbar > .search-bar > button {
+  height: 38px;
+  border: 1px solid var(--border-color);
+  border-radius: 0 40px 40px 0;
+  background-color: rgb(248, 248, 248);
+}
+
+.toolbar > .search-bar > button > span.material-symbols-outlined {
+  line-height: 18px;
+}
+
+.content {
+  padding: 0 24px;
+}
+
+.content > .player-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* So che non avrò altri player in pagina e mi serve stilizzare precisamente questo, quindi posso usare l'ID */
+#player {
+  border-radius: 12px;
+  background-color: black;
+  width: 1220px;
+  height: 670px;
+}
